@@ -126,7 +126,7 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 function hungryDog(weight,age){
   if(age >= 1 && weight <=5){
     return weight * 0.05;
-  } else if (age >= 1 && weight >= 6 && weight <= 10){
+  } else if (age >= 1 && weight >= 5 && weight <= 10){
     return weight * 0.04;
   } else if (age >= 1 && weight >=11 && weight <= 15){
     return weight * 0.03;
@@ -262,9 +262,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(number){
+if (number >= 90){
+  return `you got an A`;
+} else if(number < 90 && number >= 80 ){
+  return `you got a B`;
+}else if (number < 80 && number >= 70){
+  return `you got a C`;
+} else if (number < 70 && number >=60){
+  return `you got a D`;
+}else if (number < 60){
+  return ` you got an F`;
 }
+}
+
+console.log('t7', grade(75));
 
 
 
